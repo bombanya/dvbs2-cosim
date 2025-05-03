@@ -1,0 +1,6 @@
+[submodule "rtl-lib"]
+	path = rtl-lib
+	url = https://github.com/bombanya/dvb_fpga.git
+[submodule "libsystemctlm-soc"]
+	path = libsystemctlm-soc
+	url = https://github.com/bombanya/libsystemctlm-soc.git
