@@ -3,3 +3,5 @@ work
 modelsim.ini
 transcript
 cosim_res.bin
+*dtb
+mode_adapter_threaded
