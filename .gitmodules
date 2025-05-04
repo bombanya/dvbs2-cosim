@@ -4,3 +4,9 @@
 [submodule "libsystemctlm-soc"]
 	path = libsystemctlm-soc
 	url = https://github.com/bombanya/libsystemctlm-soc.git
+[submodule "xilinx-qemu"]
+	path = xilinx-qemu
+	url = https://github.com/bombanya/xilinx-qemu.git
+[submodule "buildroot"]
+	path = buildroot
+	url = https://github.com/buildroot/buildroot.git
