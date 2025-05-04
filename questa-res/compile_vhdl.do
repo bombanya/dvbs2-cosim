@@ -55,4 +55,4 @@ vcom -2008 -work work \
     rtl-lib/rtl/dummy_frame_generator.vhd \
     rtl-lib/rtl/axi_physical_layer_scrambler.vhd \
     rtl-lib/rtl/*.vhd \
-    questa/*.vhd
+    questa-res/*.vhd

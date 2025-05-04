@@ -16,10 +16,10 @@ sccom -g -I./libsystemctlm-soc/libremote-port/ -I./libsystemctlm-soc/ ./libsyste
 sccom -g -I./libsystemctlm-soc/libremote-port/ -I./libsystemctlm-soc/ ./libsystemctlm-soc/libremote-port/remote-port-tlm-wires.cc
 sccom -g -I./libsystemctlm-soc/libremote-port/ -I./libsystemctlm-soc/ ./libsystemctlm-soc/libremote-port/remote-port-tlm-memory-master.cc
 sccom -g -I./libsystemctlm-soc/libremote-port/ -I./libsystemctlm-soc/ ./libsystemctlm-soc/libremote-port/remote-port-tlm-memory-slave.cc
-sccom -g -I./libsystemctlm-soc/libremote-port/ -I./libsystemctlm-soc/ ./questa/scrambler.cc
-sccom -g -I./libsystemctlm-soc/libremote-port/ -I./libsystemctlm-soc/ -I./libsystemctlm-soc/tlm-bridges/ ./questa/stream_adapter.cc
+sccom -g -I./libsystemctlm-soc/libremote-port/ -I./libsystemctlm-soc/ ./questa-res/scrambler.cc
+sccom -g -I./libsystemctlm-soc/libremote-port/ -I./libsystemctlm-soc/ -I./libsystemctlm-soc/tlm-bridges/ ./questa-res/stream_adapter.cc
 
 # Link (systemc.so)
 sccom -link 
 
-vlog ./questa/dvbs_top.v
+vlog ./questa-res/dvbs_top.v
