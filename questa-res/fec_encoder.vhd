@@ -101,36 +101,36 @@ begin
       s_tdata         => bch_encoder.tdata,
       s_tid           => bch_encoder.tid,
       -- AXI output
-      m_tready        => ldpc_encoder.tready,
-      m_tvalid        => ldpc_encoder.tvalid,
-      m_tlast         => ldpc_encoder.tlast,
-      m_tdata         => ldpc_encoder.tdata,
-      m_tid           => ldpc_encoder.tid);
-
-  bit_interleaver_u : entity work.axi_bit_interleaver
-    generic map (
-      TDATA_WIDTH => 8,
-      TID_WIDTH   => ENCODED_CONFIG_WIDTH
-    )
-    port map (
-      -- Usual ports
-      clk             => clk,
-      rst             => rst,
-      -- AXI input
-      s_frame_type    => decode(ldpc_encoder.tid).frame_type,
-      s_constellation => decode(ldpc_encoder.tid).constellation,
-      s_code_rate     => decode(ldpc_encoder.tid).code_rate,
-      s_tready        => ldpc_encoder.tready,
-      s_tvalid        => ldpc_encoder.tvalid,
-      s_tlast         => ldpc_encoder.tlast,
-      s_tdata         => ldpc_encoder.tdata,
-      s_tid           => ldpc_encoder.tid,
-      -- AXI output
       m_tready        => m_tready,
       m_tvalid        => m_tvalid,
       m_tlast         => m_tlast,
-      m_tdata         => m_tdata
-      -- m_tid           => bit_interleaver.tid
-      );
+      m_tdata         => m_tdata,
+      m_tid           => ldpc_encoder.tid);
+
+--   bit_interleaver_u : entity work.axi_bit_interleaver
+--     generic map (
+--       TDATA_WIDTH => 8,
+--       TID_WIDTH   => ENCODED_CONFIG_WIDTH
+--     )
+--     port map (
+--       -- Usual ports
+--       clk             => clk,
+--       rst             => rst,
+--       -- AXI input
+--       s_frame_type    => decode(ldpc_encoder.tid).frame_type,
+--       s_constellation => decode(ldpc_encoder.tid).constellation,
+--       s_code_rate     => decode(ldpc_encoder.tid).code_rate,
+--       s_tready        => ldpc_encoder.tready,
+--       s_tvalid        => ldpc_encoder.tvalid,
+--       s_tlast         => ldpc_encoder.tlast,
+--       s_tdata         => ldpc_encoder.tdata,
+--       s_tid           => ldpc_encoder.tid,
+--       -- AXI output
+--       m_tready        => m_tready,
+--       m_tvalid        => m_tvalid,
+--       m_tlast         => m_tlast,
+--       m_tdata         => m_tdata
+--       -- m_tid           => bit_interleaver.tid
+--       );
 
 end fec_encoder;
